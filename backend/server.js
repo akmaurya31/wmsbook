@@ -21,6 +21,9 @@ app.use(express.static('public'));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
+const __dirname = path.resolve();
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+
 //var getschema = require("../backend/route.js");//ravi line
 var newdata="";var newdata1=""; 
 var newdata2="";var datacon="";
